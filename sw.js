@@ -20,9 +20,7 @@ self.addEventListener('install', e=>{
 
 self.addEventListener('fetch', e=>{
     
-    const respuesta = caches.match(e.request);
-    
-    e.respondWith(respuesta);
+    e.respondWith(caches.match(e.request));
     
 });
 
